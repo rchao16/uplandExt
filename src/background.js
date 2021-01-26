@@ -46,6 +46,7 @@ chrome.runtime.onStartup.addListener(async () => {
 });
 
 chrome.tabs.onActivated.addListener(async data => {
+  console.log('ON THIS PAGE', data)
   const {tabId} = data;
   if (!tabId)
     return;
